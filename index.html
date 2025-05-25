@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Menu</title>
+    <style>
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            background-color: #18cedb;
+            margin: 0;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(to right, rgb(223, 106, 59), rgb(66, 92, 207));
+        }
+
+        header h1 {
+            color: white;
+        }
+
+        .pic {
+            background-image: url("./hotel.jpg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 100vh;
+            position: relative;
+            left: 180px;
+            margin-top: 20px;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .container a {
+            position: relative;
+            bottom: 15px;
+            left: 480px;
+            background-color: beige;
+            width: 50px;
+            height: 10px;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .container a:hover {
+            background-color: rgb(247, 247, 122);
+            color: #050303;
+        }
+
+        .link {
+            background-color: bisque;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .family {
+            width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #050303;
+            text-shadow: #18cedb 10px 5px 10px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #030202;
+        }
+
+        .menu-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            margin-right: 15px;
+        }
+
+        .price {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        input {
+            width: 30px;
+
+        }
+
+        button {
+            width: 60px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: #3d1df0;
+            position: relative;
+            left: 540px;
+            top: 12.5px;
+        }
+
+        button:hover {
+            background-color: #0ea34c;
+            color: #f8f8f8;
+            font-size: 15px;
+        }
+
+        .search {
+            width: 500px;
+            text-align: center;
+        }
+
+        .summa {
+            text-align: center;
+        }
+
+        footer {
+            background-color: #dbf01d;
+            text-align: center;
+            height: 35px;
+        }
+
+        @media screen and (max-width: 420px) {
+            body {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .container a {
+                left: 0;
+                position: static;
+                width: auto;
+                padding: 10px;
+                text-align: center;
+            }
+
+            .pic {
+                height: 50vh;
+                width: 100%;
+                background-size: contain;
+            }
+
+            .family {
+                width: 100%;
+                padding: 10px;
+            }
+
+            .menu-item {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .menu-item img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .search {
+                width: 100%;
+            }
+
+            button {
+                left: 0;
+                position: static;
+                width: 100%;
+            }
+
+            footer {
+                font-size: 14px;
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>WELCOME<br>To<br>Lakshan Hotels</h1>
+        <div class="container">
+            <a href="#about">about</a>
+            <a href="#menu">menu</a>
+            <a href="#partner">partner</a>
+        </div>
+    </header>
+
+
+    <div class="pic"></div>
+
+
+    <div class="reference">
+        <div id="about" class="link">
+            <h1>About-Us</h1>
+            <p>Welcome to Lakshan Hotel, where comfort meets elegance. Nestled in the heart of [location], our hotel
+                offers a serene escape with modern amenities, warm hospitality, and a touch of local charm. Whether
+                you're here for business or leisure, Lakshan promises an unforgettable stay tailored to your needs.</p>
+        </div>
+
+        <div id="menu" class="link">
+            <h1>Hotel Menu</h1>
+            <div class="family">
+                <input type="search" class="search">
+                <div class="menu-item">
+                    <img src="./grill.jpg" alt="Grilled Chicken">
+                    <div class="menu-text">
+                        <p>Grilled Chicken</p>
+                        <p class="price">$12.99</p>
+                        <input type="number">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="./quorn-2898.webp" alt="Pasta Alfredo">
+                    <div class="menu-text">
+                        <p>Pasta Alfredo</p>
+                        <p class="price">$10.49</p>
+                        <input type="number">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="./Hyderabadi-Chicken-Briyani.webp" alt="Briyani">
+                    <div class="menu-text">
+                        <p>Briyani</p>
+                        <p class="price">$8.99</p>
+                        <input type="number">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <img src="./Chocolate-Cake.jpg" alt="Chocolate Cake">
+                    <div class="menu-text">
+                        <p>Chocolate Cake</p>
+                        <p class="price">$6.99</p>
+                        <input type="number">
+                    </div>
+                </div>
+                <button>submit</button>
+            </div>
+        </div>
+
+        <div id="partner" class="link">
+            <h1>Partner</h1>
+            <ul>
+                <li>Rohith</li>
+                <li>Akash</li>
+                <li>Afsal</li>
+                <li>Srinivas</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>Created By Lakshan.M</footer>
+</body>
+
+</html>
