@@ -9,8 +9,6 @@
         body {
             font-family: Georgia, 'Times New Roman', Times, serif;
             background-color: #18cedb;
-            margin: 0;
-            padding: 20px;
         }
 
         header {
@@ -45,7 +43,6 @@
             border-radius: 20px;
             padding: 20px;
             margin: 10px;
-            text-decoration: none;
         }
 
         .container a:hover {
@@ -133,7 +130,8 @@
         }
 
         @media screen and (max-width: 420px) {
-            body {
+            header {
+                width: 85vw;
                 padding: 10px;
             }
 
@@ -143,8 +141,7 @@
             }
 
             .container {
-                flex-direction: column;
-                align-items: center;
+                justify-content: center;
             }
 
             .container a {
@@ -156,9 +153,11 @@
             }
 
             .pic {
-                height: 50vh;
-                width: 100%;
-                background-size: contain;
+                height: 50vh; /* You can adjust this height as needed */
+                position: relative;
+                left: 1px;
+                background-size: cover; /* Changed from 'contain' to 'cover' */
+                background-position: center; /* Added to center the image */
             }
 
             .family {
@@ -221,39 +220,41 @@
             <h1>Hotel Menu</h1>
             <div class="family">
                 <input type="search" class="search">
-                <div class="menu-item">
-                    <img src="./grill.jpg" alt="Grilled Chicken">
-                    <div class="menu-text">
-                        <p>Grilled Chicken</p>
-                        <p class="price">$12.99</p>
-                        <input type="number">
+                <div class="menu-list">
+                    <div class="menu-item">
+                        <img src="./grill.jpg" alt="Grilled Chicken">
+                        <div class="menu-text">
+                            <p>Grilled Chicken</p>
+                            <p class="price">$12.99</p>
+                            <input type="number">
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./quorn-2898.webp" alt="Pasta Alfredo">
+                        <div class="menu-text">
+                            <p>Pasta Alfredo</p>
+                            <p class="price">$10.49</p>
+                            <input type="number">
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./Hyderabadi-Chicken-Briyani.webp" alt="Briyani">
+                        <div class="menu-text">
+                            <p>Briyani</p>
+                            <p class="price">$8.99</p>
+                            <input type="number">
+                        </div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="./Chocolate-Cake.jpg" alt="Chocolate Cake">
+                        <div class="menu-text">
+                            <p>Chocolate Cake</p>
+                            <p class="price">$6.99</p>
+                            <input type="number">
+                        </div>
                     </div>
                 </div>
-                <div class="menu-item">
-                    <img src="./quorn-2898.webp" alt="Pasta Alfredo">
-                    <div class="menu-text">
-                        <p>Pasta Alfredo</p>
-                        <p class="price">$10.49</p>
-                        <input type="number">
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="./Hyderabadi-Chicken-Briyani.webp" alt="Briyani">
-                    <div class="menu-text">
-                        <p>Briyani</p>
-                        <p class="price">$8.99</p>
-                        <input type="number">
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="./Chocolate-Cake.jpg" alt="Chocolate Cake">
-                    <div class="menu-text">
-                        <p>Chocolate Cake</p>
-                        <p class="price">$6.99</p>
-                        <input type="number">
-                    </div>
-                </div>
-                <button>submit</button>
+                <button class="submit-btn">Submit</button>
             </div>
         </div>
 
